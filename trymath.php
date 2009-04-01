@@ -4,7 +4,7 @@ Plugin Name: trymath
 Plugin URI: http://www.ushcompu.com.ar/2009/03/30/math-challenge-no-captcha/
 Description: figlet math challenge, captcha replacement, based on TryMath php class and phpFiglet
 Author: totoloco
-Version: 0.1
+Version: 0.1.1
 Author URI: http://www.ushcompu.com.ar/
 */
 
