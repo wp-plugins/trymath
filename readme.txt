@@ -14,6 +14,8 @@ figlet math challenge, captcha replacement, based on TryMath php class and phpFi
 trymath is an accessible way to secure your comments. no image, no gd, only ascii art math using phpFiglet.
 phpFiglet is licensed under GPL.
 trymath is licensed under Sisterware.
+phpFiglet, and trymath, supports more figlet fonts :)
+[fonts](http://www.figlet.org/fontdb.cgi "fonts")
 
 [http://www.ushcompu.com.ar/2009/03/30/math-challenge-no-captcha/](http://www.ushcompu.com.ar/2009/03/30/math-challenge-no-captcha/ "homepage")
 [Click here](http://www.ushcompu.com.ar/2009/03/30/math-challenge-no-captcha/ "trymath demo") to see trymath in action.
@@ -32,6 +34,9 @@ trymath is licensed under Sisterware.
 = What is the plugin homepage? =
 
 [http://www.ushcompu.com.ar/2009/03/30/math-challenge-no-captcha/](http://www.ushcompu.com.ar/2009/03/30/math-challenge-no-captcha/ "homepage")
+
+= What is figlet? =
+[http://www.figlet.org/](http://www.figlet.org/ "figlet")
 
 == Screenshots ==
 
