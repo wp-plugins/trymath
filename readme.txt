@@ -1,7 +1,7 @@
 === Plugin Name ===
 Contributors: totoloco_
 Donate link: http://www.ushcompu.com.ar/
-Tags: captcha, figlet ascii
+Tags: captcha, figlet, math, ascii
 Requires at least: 2.3
 Tested up to: 2.7.1
 Stable tag: trunk
