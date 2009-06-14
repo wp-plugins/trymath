@@ -4,7 +4,7 @@ Plugin Name: trymath
 Plugin URI: http://www.ushcompu.com.ar/2009/03/30/math-challenge-no-captcha/
 Description: figlet math challenge, captcha replacement, based on TryMath php class and phpFiglet
 Author: totoloco
-Version: 0.1.2
+Version: 0.1
 Author URI: http://www.ushcompu.com.ar/
 */
 
@@ -36,32 +36,41 @@ class trymath {
 	function draw_form ($id) {
     global $newTrymath, $user_ID;
     if ($user_ID) return $id;
-    session_start ();
+    @session_start ();
     $newTrymath -> generate ();
     $_SESSION['trymath'] = md5 ($newTrymath -> salt . $newTrymath -> getResult ());
 ?>
 <div id="trymath_cont">
  <p>
-  <input type="text" name="trymath" id="trymath" />
   <label for="trymath">
-   <small><strong> = </strong></small></label>
+    Seguridad:
   </label>
+  <input type="text" name="trymath" id="trymath" />
+  <br /> =
  </p>
  <pre><?php echo $newTrymath -> fetch () ?></pre>
 </div>
 <script type="text/javascript">
 //<![CDATA[
-for( i = 0; i < document.forms.length; i++ ) {
-	if( typeof(document.forms[i].trymath) != 'undefined' ) {
-		commentForm = document.forms[i].comment.parentNode;
-		break;
-	}
+//for( i = 0; i < document.forms.length; i++ ) {
+//	if( typeof(document.forms[i].trymath) != 'undefined' ) {
+//		commentForm = document.forms[i].comment.parentNode;
+//		break;
+//	}
+//}
+//var commentArea = commentForm.parentNode;
+//var captchafrm = document.getElementById("trymath_cont");
+//commentArea.insertBefore(captchafrm, commentForm);
+//commentArea.trymath.size = commentArea.author.size;
+//commentArea.trymath.className = commentArea.author.className;
+function insertAfter (referenceNode, newNode) {
+  referenceNode.parentNode.insertBefore (newNode, referenceNode.nextSibling);
 }
-var commentArea = commentForm.parentNode;
 var captchafrm = document.getElementById("trymath_cont");
-commentArea.insertBefore(captchafrm, commentForm);
-commentArea.trymath.size = commentArea.author.size;
-commentArea.trymath.className = commentArea.author.className;
+var url = document.getElementById ('url');
+if (url != undefined) {
+  insertAfter (url, captchafrm);
+}
 //]]>
 </script>
 <?php
