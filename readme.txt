@@ -3,7 +3,7 @@ Contributors: totoloco_
 Donate link: http://www.ushcompu.com.ar/
 Tags: captcha, figlet, math, ascii
 Requires at least: 2.3
-Tested up to: 2.7.1
+Tested up to: 2.8
 Stable tag: trunk
 
 figlet math challenge, captcha replacement, based on TryMath php class and phpFiglet
